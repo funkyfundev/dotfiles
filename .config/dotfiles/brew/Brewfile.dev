@@ -1,0 +1,17 @@
+# Development tools. Install: brew bundle --file=Brewfile.dev
+
+brew "neovim"
+brew "lazygit"
+brew "lazydocker"
+brew "git-delta"
+brew "shellcheck"
+brew "shfmt"
+brew "pre-commit"
+brew "gitleaks"
+brew "httpie"
+brew "sqlite"
+
+cask "visual-studio-code" unless File.exist?("/Applications/Visual Studio Code.app")
+cask "sublime-text" unless File.exist?("/Applications/Sublime Text.app")
+# Docker Desktop: free tier, personal use. The Homebrew cask was renamed from "docker".
+cask "docker-desktop" unless File.exist?("/Applications/Docker.app")

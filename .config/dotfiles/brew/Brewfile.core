@@ -1,0 +1,30 @@
+# Core tools and apps for every Mac. Install: brew bundle --file=Brewfile.core
+
+# --- CLI ---
+brew "git"
+brew "gh"
+brew "starship"
+brew "antidote"
+brew "mise"
+brew "pipx"
+brew "fzf"
+brew "ripgrep"
+brew "fd"
+brew "bat"
+brew "eza"
+brew "zoxide"
+brew "jq"
+brew "yq"
+brew "tree"
+brew "wget"
+brew "tldr"
+brew "yazi"
+brew "trash"
+brew "dockutil"
+brew "mas"
+
+# --- Apps (skipped when already present, e.g. pushed by device management) ---
+cask "iterm2" unless File.exist?("/Applications/iTerm.app")
+cask "font-jetbrains-mono-nerd-font"
+cask "1password" unless File.exist?("/Applications/1Password.app")
+cask "1password-cli"
